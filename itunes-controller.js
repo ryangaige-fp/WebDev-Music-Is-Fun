@@ -1,22 +1,19 @@
-import ItunesService from "./itunes-service.js";
+function ItunesController() {
 
-//PRIVATE
+  // PRIVATE
+  const itunesService = new ItunesService()
 
-const itunesService = new ItunesService()
-
-function drawSongs(results) {
-  console.log(results)
-  //YOUR CODING STARTS HERE
-
+  function drawSongs(results) {
+    console.log(results)
+    //YOUR CODING STARTS HERE
 
 
-}
 
+  }
 
-//PUBLIC
-class ItunesController {
+  //PUBLIC
   //DO NOT MODIFY THIS METHOD
-  getMusic(e) {
+  this.getMusic = function (e) {
     e.preventDefault();
     var artist = e.target.artist.value;
     //changes the button to loading while songs load
@@ -31,5 +28,3 @@ class ItunesController {
 
 }
 
-
-export default ItunesController
