@@ -2,7 +2,8 @@ function ItunesService() {
   //DO NOT MODIFY
   this.getMusicByArtist = function(artist) {
     let url1 = "//bcw-getter.herokuapp.com/?url=";
-    let url2 = "https://itunes.apple.com/search?term=" + artist;
+    let url2 =
+      "https://itunes.apple.com/search?term=" + artist + "&entity=musicArtist";
     let apiUrl = url1 + encodeURI(url2);
 
     //Casts each object to

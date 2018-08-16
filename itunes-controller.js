@@ -10,28 +10,49 @@ function ItunesController() {
       const song = songs[i];
       template += `
 
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-3">
-            <p>Title: ${song.title}</p>
-            <img src="${song.albumArt}" alt="">
-            <p>Artist: ${song.artist}</p>
-            <p>Collection: ${song.collection}</p>
-            <p>price: ${song.price}</p> 
-            <audio controls><source src="${song.preview}" type="audio/mpeg">
-            </audio>
-
+     
+         
+            <div class="row d-inline-block p-4">
+        
+              <div class="card text-center zoom">
+                <img class="card-img-top" src="${
+                  song.albumArt
+                }" alt="Card image cap">
+                <h5 class="card-title" pt-2>${song.artist}</h5>
+                <p class="card-text">${song.title}</p>
+                <p class="card-text">${song.collection}</p>
+                <p class="card-text">${song.price}</p> 
+                <audio controls id="myTune"><source src="${
+                  song.preview
+                }" type="audio/mpeg">
+                </audio>
+              </div>
+        
           </div>
-        </div>
-    </div>
+      
+  
 
         `;
     }
     document.getElementById("songs").innerHTML = template;
 
+    //this event listener pauses the music when another play button is pressed
+    document.addEventListener(
+      "play",
+      function(pause) {
+        let audio = document.getElementsByTagName("audio");
+        for (var i = 0, len = audio.length; i < len; i++) {
+          if (audio[i] != pause.target) {
+            audio[i].pause();
+          }
+        }
+      },
+      true
+    );
+
     console.log(songs);
   }
-  getMusicByArtist.reset();
+  // getMusicByArtist.reset();
 
   //PUBLIC
   //DO NOT MODIFY THIS METHOD
