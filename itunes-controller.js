@@ -12,16 +12,18 @@ function ItunesController() {
 
      
          
-            <div class="row d-inline-block p-4">
+            <div class="row d-inline-block p-4 thirds">
         
               <div class="card text-center zoom">
                 <img class="card-img-top" src="${
                   song.albumArt
                 }" alt="Card image cap">
+                <div class="songContainer">
                 <h5 class="card-title" pt-2>${song.artist}</h5>
                 <p class="card-text">${song.title}</p>
                 <p class="card-text">${song.collection}</p>
                 <p class="card-text">${song.price}</p> 
+                </div>
                 <audio controls id="myTune"><source src="${
                   song.preview
                 }" type="audio/mpeg">
