@@ -11,7 +11,7 @@ body {
 }
 
 .background {
-  height: 100vh;
+  height: 1500vh;
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
@@ -52,11 +52,24 @@ img {
 }
 
 #songs {
-  width: 92%;
+  width: 65%;
   margin: 0 auto;
 }
 
 .thirds {
   width: 33%;
   margin: 0 auto;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/assets/Photos/microphone.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }

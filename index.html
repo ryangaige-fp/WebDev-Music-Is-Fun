@@ -16,26 +16,31 @@
 <body>
 
     <div class="backgroundImage">
-
-        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-            <div class="form-group">
-                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+        <!-- <div class="row justify-content-center pt-2"> -->
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <h1 class="jumbotron-heading">"Music Can Change The World"</h1>
+                <p class="lead text-muted">Search for your favorite Artist & enjoy the results!</p>
+                <form class="form-inline justify-content-center" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                        <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                    </div>
+                </form>
             </div>
-        </form>
-
+        </div>
+        <!-- </div> -->
 
         <div class="container-fluid background">
+            <!-- <div class="col-9 "> -->
+            <div class="row">
 
-            <div class="container">
-                <div class="row">
+                <div id="songs">
 
-                    <div id="songs">
-
-                    </div>
                 </div>
             </div>
+            <!-- </div> -->
 
         </div>
 

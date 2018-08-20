@@ -22,7 +22,9 @@ function ItunesController() {
                 <h5 class="card-title" pt-2>${song.artist}</h5>
                 <p class="card-text">${song.title}</p>
                 <p class="card-text">${song.collection}</p>
-                <p class="card-text">${song.price}</p> 
+                <p class="card-text"><span style="color:blue">Buy $${
+                  song.price
+                }</span></p> 
                 </div>
                 <audio controls id="myTune"><source src="${
                   song.preview
